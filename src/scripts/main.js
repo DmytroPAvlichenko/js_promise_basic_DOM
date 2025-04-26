@@ -1,11 +1,13 @@
 'use strict';
 
 const promise1 = new Promise((resolve, reject) => {
-  const logo = document.querySelector('h1');
+  const logo = document.querySelector('.logo');
 
-  logo.addEventListener('click', () => {
-    resolve();
-  });
+    if (logo) {
+      logo.addEventListener('click', () => {
+        resolve();
+      });
+    }
 });
 
 promise1
